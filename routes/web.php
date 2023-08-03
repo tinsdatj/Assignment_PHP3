@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\StudentController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,3 +16,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/list-students',[StudentController::class,'list_students'])->name('list-student');
+Route::match(['GET','POST'],'/add/student',[StudentController::class,'add']);
+Route::match(['GET','POST'],'/edit/student/{id}',[StudentController::class,'edit']);
+Route::get('/delete/student/{id}', [StudentController::class, 'delete'])->name('delete-student');
+
