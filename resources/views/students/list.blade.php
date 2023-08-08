@@ -17,11 +17,12 @@
                 <tr>
                     <th>{{$lst->id}}</th>
                     <th>{{$lst->name}}</th>
-                    <th>{{$lst->id == 1 ? "Nam" : "Nữ"}}</th>
+                    <th>{{$lst->gender == 1 ? "Nam" : "Nữ"}}</th>
                     <th>{{$lst->phone}}</th>
                     <th>{{$lst->address}}</th>
-                    <th><img src="{{$lst->image ? Storage::url($lst->image) : ""}}" alt="."></th>
-                    <th><a href="{{route('delete-student',['id'=>$lst->id])}}">Xóa</a></th>
+                    <th><img src="{{$lst->image ? Storage::url($lst->image) : ""}}" width="200px" alt="."></th>
+                    <th><a class="btn btn-primary" href="{{route('edit-student',['id'=>$lst->id])}}" >Sửa</a>
+                        <a class="btn btn-danger" href="{{route('delete-student',['id'=>$lst->id])}}" >Xóa</a></th>
                 </tr>
             @endforeach
 

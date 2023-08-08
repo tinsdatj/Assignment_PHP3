@@ -15,7 +15,7 @@
 
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">ASSIGNMENT PHP3</a>
+            <a class="navbar-brand" href="{{route('list-student')}}">ASSIGNMENT PHP3</a>
             <p>DATPTPH25870</p>
 
         </div>

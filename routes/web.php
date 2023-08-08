@@ -18,6 +18,6 @@ Route::get('/', function () {
 });
 Route::get('/list-students',[StudentController::class,'list_students'])->name('list-student');
 Route::match(['GET','POST'],'/add/student',[StudentController::class,'add']);
-Route::match(['GET','POST'],'/edit/student/{id}',[StudentController::class,'edit']);
+Route::match(['GET','POST'],'/edit/student/{id}',[StudentController::class,'edit'])->name('edit-student');
 Route::get('/delete/student/{id}', [StudentController::class, 'delete'])->name('delete-student');
 

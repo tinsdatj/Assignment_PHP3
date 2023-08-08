@@ -55,11 +55,11 @@ class StudentRequest extends FormRequest
     public  function messages()
     {
         return [
-            'name:required' => "Vui lòng điền họ tên",
-            'phone:required' => "Vui lòng điền Số điện thoại",
-            'phone:unique' => "Số điện thoại đã tồn tại",
-            'address:required' => "Vui lòng điền địa chỉ",
-            'image:required' => "Vui lòng tải ảnh lên"
+            'name.required' => "Vui lòng điền họ tên",
+            'phone.required' => "Vui lòng điền Số điện thoại",
+            'phone.unique' => "Số điện thoại đã tồn tại",
+            'address.required' => "Vui lòng điền địa chỉ",
+            'image.required' => "Vui lòng tải ảnh lên"
         ];
     }
 }

@@ -1,10 +1,4 @@
-@if($errors->any())
-    <ul>
-        @foreach($errors->all() as $error)
-            <li style="color: red">{{$error}}</li>
-        @endforeach
-    </ul>
-@endif
+
 @if ( Session::has('success') )
     <div class="alert alert-success">
         {{ Session::get('success') }}

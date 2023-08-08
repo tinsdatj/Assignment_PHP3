@@ -5,17 +5,23 @@
         @csrf
         <div class="mb-3">
             <label class="form-label">Họ tên:</label>
-
+            @error('name')
+            <p style="color: red">{{$message}}</p>
+            @enderror
             <input type="text" class="form-control" name="name" >
         </div>
         <div class="mb-3">
             <label class="form-label">Số điện thoại:</label>
-
+            @error('phone')
+            <p style="color: red">{{$message}}</p>
+            @enderror
             <input type="text" class="form-control" name="phone" >
         </div>
         <div class="mb-3">
             <label class="form-label">Địa chỉ:</label>
-
+            @error('address')
+            <p style="color: red">{{$message}}</p>
+            @enderror
             <input type="text" class="form-control" name="address">
         </div>
         <div class="mb-3">
@@ -27,7 +33,9 @@
         </div>
         <div class="mb-3">
             <label class="mb-3">Ảnh</label>
-
+            @error('image')
+            <p style="color: red">{{$message}}</p>
+            @enderror
             <div class="col-md-9 col-sm-8">
                 <div class="row">
                     <div class="col-xs-6">
